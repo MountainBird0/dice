@@ -771,6 +771,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1777315545}
+        m_TargetAssemblyTypeName: ScrollText, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1640579629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -864,6 +876,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1662475515 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4228268216101423739, guid: c92ca7e89f3a70742a1a4d0e48ebc953, type: 3}
+  m_PrefabInstance: {fileID: 2112164227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1765454077
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +996,7 @@ GameObject:
   - component: {fileID: 1777315547}
   - component: {fileID: 1777315546}
   - component: {fileID: 1777315550}
+  - component: {fileID: 1777315551}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1077,6 +1095,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72f267c094930846b2cb102986a3a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1777315551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777315545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f18073dde3bbd84494bd11688903fe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 5365769285384654916, guid: b184393c9556dbf4994cb9c350a3a81f, type: 3}
+  getpos: {fileID: 1777315549}
+  offsetY: 5
 --- !u!1 &1973093159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,6 +1252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 193519234, guid: c92ca7e89f3a70742a1a4d0e48ebc953, type: 3}
+      propertyPath: rd
+      value: 
+      objectReference: {fileID: 1662475515}
     - target: {fileID: 8095807815315959719, guid: c92ca7e89f3a70742a1a4d0e48ebc953, type: 3}
       propertyPath: m_RootOrder
       value: 3

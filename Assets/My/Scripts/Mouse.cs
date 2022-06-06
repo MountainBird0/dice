@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mouse : MonoBehaviour
 {
     Vector3 objPosition = new Vector3(0f, 0f, 0f);
-    Vector3 force = new Vector3(0f, 0f, 0f);
+    Vector3 force = new Vector3(0f, 5f, 0f);
 
     public Rigidbody rd;
     private float distance = 5;
@@ -19,8 +19,10 @@ public class Mouse : MonoBehaviour
     {
         Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance);
         objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        Quaternion rota = Quaternion.Euler(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance));
-        
+        Quaternion rota = Quaternion.Euler(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+
+        rd.AddTorque(mousePosition);
+
         transform.position = objPosition;
         transform.rotation = rota;
     }
@@ -28,6 +30,6 @@ public class Mouse : MonoBehaviour
     //private void OnMouseUp()
     //{
     //    Debug.Log("sdfsdfsdfsdf");
-    //    rd.AddForce(Input.mousePosition.x, Input.mousePosition.y, distance);
+    //    rd.AddTorque(force);
     //}
 }
